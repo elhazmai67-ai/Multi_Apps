@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lv_background">#0A0A0A</color>
+    <color name="lv_surface">#151515</color>
+    <color name="lv_text">#F2F2F2</color>
+    <color name="lv_text_secondary">#A0A0A0</color>
+    <color name="lv_accent">#D9F55A</color>
+    <color name="lv_outline">#2A2A2A</color>
+</resources>

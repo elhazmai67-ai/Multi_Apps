@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LinkVault</string>
+    <string name="shortcut_add">Add link</string>
+    <string name="shortcut_favorites">Favorites</string>
+    <string name="shortcut_pinned">Pinned links</string>
+    <string name="shortcut_search">Search</string>
+    <string name="widget_description">Quick-launch your pinned links</string>
+    <string name="widget_title">Pinned</string>
+    <string name="widget_empty">Pin a link in LinkVault and it shows up here.</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="search"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_search"
+        android:shortcutShortLabel="@string/shortcut_search">
+        <intent
+            android:action="com.linkvault.app.SEARCH"
+            android:targetClass="com.linkvault.app.MainActivity"
+            android:targetPackage="com.linkvault.app" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="pinned"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_pin"
+        android:shortcutShortLabel="@string/shortcut_pinned">
+        <intent
+            android:action="com.linkvault.app.PINNED"
+            android:targetClass="com.linkvault.app.MainActivity"
+            android:targetPackage="com.linkvault.app" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="favorites"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_star"
+        android:shortcutShortLabel="@string/shortcut_favorites">
+        <intent
+            android:action="com.linkvault.app.FAVORITES"
+            android:targetClass="com.linkvault.app.MainActivity"
+            android:targetPackage="com.linkvault.app" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="add"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_add"
+        android:shortcutShortLabel="@string/shortcut_add">
+        <intent
+            android:action="com.linkvault.app.ADD"
+            android:targetClass="com.linkvault.app.MainActivity"
+            android:targetPackage="com.linkvault.app" />
+    </shortcut>
+</shortcuts>
