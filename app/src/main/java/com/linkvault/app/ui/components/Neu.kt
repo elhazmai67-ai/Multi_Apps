@@ -28,12 +28,10 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
-import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.asAndroidPath
-import androidx.compose.ui.graphics.asFrameworkPaint
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
@@ -67,7 +65,7 @@ private fun Outline.toPath(): Path = Path().apply {
 private fun DrawScope.shadowPath(path: Path, color: Color, blur: Float, dx: Float, dy: Float) {
     if (blur <= 0f) return
     drawIntoCanvas { canvas ->
-        val paint = Paint().asFrameworkPaint().apply {
+        val paint = android.graphics.Paint().apply {
             isAntiAlias = true
             this.color = android.graphics.Color.TRANSPARENT
             setShadowLayer(blur, dx, dy, color.toArgb())
