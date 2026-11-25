@@ -77,7 +77,7 @@ fun LockScreen(vm: MainViewModel) {
     ) {
         AppMark(size = 64.dp)
         Spacer(Modifier.height(16.dp))
-        Text("LinkVault is locked", style = MaterialTheme.typography.titleLarge)
+        Text("Multi Apps is locked", style = MaterialTheme.typography.titleLarge)
         Spacer(Modifier.height(4.dp))
         Text(
             when {

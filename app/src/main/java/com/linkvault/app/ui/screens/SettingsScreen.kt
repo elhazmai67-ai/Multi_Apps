@@ -168,7 +168,7 @@ fun SettingsScreen(vm: MainViewModel, navigate: (String) -> Unit) {
     if (overlayDialog) AlertDialog(
         onDismissRequest = { overlayDialog = false }, shape = Radius.card,
         title = { Text("Allow display over other apps") },
-        text = { Text("To show the floating button, Android needs your permission to display LinkVault over other apps. On the next screen turn on \"Allow display over other apps\", then come back.") },
+        text = { Text("To show the floating button, Android needs your permission to display Multi Apps over other apps. On the next screen turn on \"Allow display over other apps\", then come back.") },
         confirmButton = {
             TextButton(onClick = {
                 overlayDialog = false
@@ -377,7 +377,7 @@ fun InfoScreen(title: String, onBack: () -> Unit, content: @Composable ColumnSco
 fun AboutScreen(onBack: () -> Unit) {
     val context = LocalContext.current
     InfoScreen("About LinkVault", onBack) {
-        Text("LinkVault", style = MaterialTheme.typography.headlineMedium)
+        Text("Multi Apps", style = MaterialTheme.typography.headlineMedium)
         Text(appVersion(context), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Spacer(Modifier.height(16.dp))
         Text(

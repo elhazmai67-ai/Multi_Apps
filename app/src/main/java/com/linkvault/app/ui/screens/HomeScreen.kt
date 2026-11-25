@@ -90,7 +90,7 @@ fun HomeScreen(vm: MainViewModel, navigate: (String) -> Unit, focusSearchSignal:
                 item(key = "header") {
                     Row(Modifier.padding(start = 20.dp, end = 20.dp, top = 16.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
-                            Text("LinkVault", style = MaterialTheme.typography.headlineMedium)
+                            Text("Multi Apps", style = MaterialTheme.typography.headlineMedium)
                             Text("Your links, organized.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
                         AppMark()
