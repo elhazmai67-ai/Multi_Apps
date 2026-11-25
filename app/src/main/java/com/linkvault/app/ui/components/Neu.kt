@@ -179,7 +179,7 @@ fun NeuButton(
     content: @Composable RowScope.() -> Unit
 ) {
     val container = colors?.containerColor ?: MaterialTheme.colorScheme.primary
-    val contentColor = colors?.contentColor ?: Color.White
+    val contentColor = colors?.contentColor ?: MaterialTheme.colorScheme.onPrimary
     val fill = if (enabled) container else MaterialTheme.colorScheme.surfaceVariant
     val fg = if (enabled) contentColor else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
     NeuPressable(onClick, modifier.defaultMinSize(minHeight = 44.dp), enabled, shape, fill, 6.dp) {
@@ -243,7 +243,7 @@ fun NeuFab(onClick: () -> Unit, contentDescription: String, content: @Composable
     NeuPressable(
         onClick, Modifier.size(58.dp).semantics { this.contentDescription = contentDescription },
         true, RoundedCornerShape(20.dp), MaterialTheme.colorScheme.primary, 7.dp
-    ) { CompositionLocalProvider(LocalContentColor provides Color.White) { content() } }
+    ) { CompositionLocalProvider(LocalContentColor provides MaterialTheme.colorScheme.onPrimary) { content() } }
 }
 
 /** Soft toggle: sunken track, raised thumb. Pass `onCheckedChange = null` when a parent row handles the tap. */
@@ -302,7 +302,7 @@ fun NeuChip(label: String, selected: Boolean, onClick: () -> Unit, modifier: Mod
     ) {
         Text(
             label, maxLines = 1, style = MaterialTheme.typography.labelLarge,
-            color = if (selected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant,
+            color = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
             overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
         )
     }
