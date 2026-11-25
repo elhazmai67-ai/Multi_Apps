@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  LinkVault mark ("folder stack"): three folders in coral, green and lime with a chain link on the front one.
-  Matches the app's folder-shaped stat cards. Everything sits inside the 66dp adaptive-icon safe zone.
+  LinkVault mark: a frosted-glass folder holding a fan of papers, in black, grey and white.
+  Everything sits inside the 66dp adaptive-icon safe zone.
 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <path android:fillColor="#FF7F62" android:pathData="M37,32 A6,6 0 0 1 43,26 L52.4,26 C57.4,26 57.4,31 62.4,31 L65,31 A6,6 0 0 1 71,37 L71,54 A6,6 0 0 1 65,60 L43,60 A6,6 0 0 1 37,54 Z" />
-    <path android:fillColor="#8CF25C" android:pathData="M33,39 A6,6 0 0 1 39,33 L53.2,33 C58.2,33 58.2,38 63.2,38 L69,38 A6,6 0 0 1 75,44 L75,63 A6,6 0 0 1 69,69 L39,69 A6,6 0 0 1 33,63 Z" />
-    <path android:fillColor="#D9F55A" android:pathData="M30,46 A6,6 0 0 1 36,40 L53.8,40 C58.8,40 58.8,45 63.8,45 L72,45 A6,6 0 0 1 78,51 L78,74 A6,6 0 0 1 72,80 L36,80 A6,6 0 0 1 30,74 Z" />
-    <group
-        android:pivotX="55"
-        android:pivotY="54"
-        android:translateX="-1"
-        android:translateY="8.5"
-        android:rotation="-45"
-        android:scaleX="0.42"
-        android:scaleY="0.42">
-        <path android:pathData="M36,42 H52 A12,12 0 0 1 52,66 H36 A12,12 0 0 1 36,42 Z" android:strokeColor="#0A0A0A" android:strokeWidth="7.5" android:strokeLineJoin="round" />
-        <path android:pathData="M62,42 H74 A12,12 0 0 1 74,66 H62 A12,12 0 0 1 62,42 Z" android:strokeColor="#0A0A0A" android:strokeWidth="7.5" android:strokeLineJoin="round" />
+
+    <!-- back panel of the folder -->
+    <path
+        android:fillColor="#2B2E35"
+        android:strokeColor="#4A4E57"
+        android:strokeWidth="0.8"
+        android:pathData="M30,40 A5,5 0 0 1 35,35 L45,35 C48,35 49,37 51,37 L73,37 A5,5 0 0 1 78,42 L78,72 A5,5 0 0 1 73,77 L35,77 A5,5 0 0 1 30,72 Z" />
+
+    <!-- papers, back to front -->
+    <group android:pivotX="68" android:pivotY="64" android:rotation="12">
+        <path android:fillColor="#C4C8D1" android:pathData="M62,34 L74,34 A2,2 0 0 1 76,36 L76,64 L60,64 L60,36 A2,2 0 0 1 62,34 Z" />
+        <path android:fillColor="#9BA0AB" android:pathData="M63,40 L73,40 L73,41.6 L63,41.6 Z" />
     </group>
+    <group android:pivotX="59" android:pivotY="64" android:rotation="5">
+        <path android:fillColor="#DCDFE6" android:pathData="M50,31 L68,31 A2,2 0 0 1 70,33 L70,64 L48,64 L48,33 A2,2 0 0 1 50,31 Z" />
+        <path android:fillColor="#9BA0AB" android:pathData="M52,37 L66,37 L66,38.6 L52,38.6 Z" />
+        <path android:fillColor="#9BA0AB" android:pathData="M52,42 L64,42 L64,43.6 L52,43.6 Z" />
+    </group>
+    <group android:pivotX="49" android:pivotY="64" android:rotation="-8">
+        <path android:fillColor="#F4F5F8" android:pathData="M38,29 L60,29 A2,2 0 0 1 62,31 L62,64 L36,64 L36,31 A2,2 0 0 1 38,29 Z" />
+        <path android:fillColor="#A9AEB9" android:pathData="M40,34 L58,34 L58,36.2 L40,36.2 Z" />
+        <path android:fillColor="#B9BCC5" android:pathData="M40,39 L56,39 L56,40.6 L40,40.6 Z" />
+        <path android:fillColor="#B9BCC5" android:pathData="M40,43.5 L55,43.5 L55,45.1 L40,45.1 Z" />
+        <path android:fillColor="#B9BCC5" android:pathData="M40,48 L52,48 L52,49.6 L40,49.6 Z" />
+    </group>
+
+    <!-- frosted glass front of the folder -->
+    <path android:pathData="M28,53 A5,5 0 0 1 33,48 L44,48 C47,48 48.5,50.5 51,50.5 L75,50.5 A5,5 0 0 1 80,55.5 L80,72 A5,5 0 0 1 75,77 L33,77 A5,5 0 0 1 28,72 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54" android:startY="48"
+                android:endX="54" android:endY="77">
+                <item android:offset="0" android:color="#C7D2D6DE" />
+                <item android:offset="1" android:color="#EB5A5D66" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- papers seen blurred through the glass -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.16" android:pathData="M37,57 L62,57 L62,59 L37,59 Z" />
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.12" android:pathData="M37,62 L58,62 L58,64 L37,64 Z" />
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.10" android:pathData="M37,67 L54,67 L54,69 L37,69 Z" />
+    <!-- glass edge highlights -->
+    <path
+        android:strokeColor="#FFFFFF" android:strokeAlpha="0.55" android:strokeWidth="0.9"
+        android:pathData="M33,48 L44,48 C47,48 48.5,50.5 51,50.5 L75,50.5" />
+    <path
+        android:strokeColor="#FFFFFF" android:strokeAlpha="0.22" android:strokeWidth="0.6"
+        android:pathData="M28,53 A5,5 0 0 1 33,48 M80,55.5 L80,72 A5,5 0 0 1 75,77 L33,77 A5,5 0 0 1 28,72 L28,53" />
 </vector>
