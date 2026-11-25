@@ -29,11 +29,11 @@ import com.linkvault.app.data.ThemeMode
  * `lime` is now the main blue accent; `ink` is the dark text colour used on the pastel tiles.
  */
 object Neon {
-    val lime = Color(0xFF6F9CF5)   // main accent (blue)
-    val green = Color(0xFF6FCDA0)  // mint
-    val coral = Color(0xFFF59A86)  // soft coral
-    val teal = Color(0xFF9D8CF2)   // soft violet
-    val ink = Color(0xFF1F2733)
+    val lime = Color(0xFF6B7280)   // graphite
+    val green = Color(0xFF8A919C)  // light grey
+    val coral = Color(0xFF5B6270)  // slate
+    val teal = Color(0xFF9AA3B2)   // silver
+    val ink = Color(0xFF1B1E23)
 }
 
 /** Light and dark shadow pair used to draw the raised / pressed-in surfaces. */
@@ -49,8 +49,8 @@ private val DarkNeu = NeuPalette(Color(0xFF30363F), Color(0xCC14171C), Color(0xF
 
 // Soft grey canvas: every surface shares the background colour and gets its depth from shadows.
 private val LightColors = lightColorScheme(
-    primary = Neon.lime, onPrimary = Color.White,
-    primaryContainer = Color(0xFFD7E3FD), onPrimaryContainer = Color(0xFF1B2B4D),
+    primary = Color(0xFF2B2F36), onPrimary = Color.White,
+    primaryContainer = Color(0xFFD9DEE6), onPrimaryContainer = Color(0xFF22262C),
     secondary = Color(0xFF7A8394), onSecondary = Color.White,
     secondaryContainer = Color(0xFFDDE3EC), onSecondaryContainer = Color(0xFF39414F),
     background = Color(0xFFE8ECF1), onBackground = Color(0xFF39414F),
@@ -64,8 +64,8 @@ private val LightColors = lightColorScheme(
 )
 
 private val DarkColors = darkColorScheme(
-    primary = Color(0xFF7BA6FF), onPrimary = Color.White,
-    primaryContainer = Color(0xFF2B3A5C), onPrimaryContainer = Color(0xFFD7E3FD),
+    primary = Color(0xFFE6EAF0), onPrimary = Color(0xFF1B1E23),
+    primaryContainer = Color(0xFF343A44), onPrimaryContainer = Color(0xFFE6EAF0),
     secondary = Color(0xFF9AA3B2), onSecondary = Color(0xFF1F2733),
     secondaryContainer = Color(0xFF2E343D), onSecondaryContainer = Color(0xFFE6EAF0),
     background = Color(0xFF23272E), onBackground = Color(0xFFE6EAF0),
