@@ -127,7 +127,7 @@ fun LinkVaultApp(vm: MainViewModel, sharedSession: MutableState<Boolean>) {
         navController.popBackStack()
         if (sharedSession.value) {
             sharedSession.value = false
-            if (saved) Toast.makeText(context, "Saved to LinkVault", Toast.LENGTH_SHORT).show()
+            if (saved) Toast.makeText(context, "Saved to Multi Apps", Toast.LENGTH_SHORT).show()
             context.findFragmentActivity()?.moveTaskToBack(true)
         }
     }
