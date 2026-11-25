@@ -259,7 +259,7 @@ fun ChipGrid(items: List<ChipItem>, modifier: Modifier = Modifier, columns: Int 
         forcedOpen -> items
         else -> items.take(visibleWhenCollapsed) + ChipItem("More +${items.size - visibleWhenCollapsed}", false) { expanded = true }
     }
-    Column(modifier.fillMaxWidth().animateContentSize(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         cells.chunked(columns).forEach { rowItems ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 rowItems.forEach { UniformChip(it.label, it.selected, it.onClick, Modifier.weight(1f)) }
