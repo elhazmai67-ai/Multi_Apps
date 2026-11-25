@@ -44,23 +44,23 @@ fun FilterSheet(
                 TextButton(onClick = { onChange(filters.copy(categoryId = if (lockCategory) filters.categoryId else null, platform = null, tag = null, favoritesOnly = false, pinnedOnly = false, sort = SortOrder.RECENT)) }) { Text("Reset") }
             }
             Label("Sort by")
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 SortOrder.entries.forEach { s -> CategoryChip(s.label, filters.sort == s, { onChange(filters.copy(sort = s)) }) }
             }
             Label("Show only")
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 CategoryChip("Favorites", filters.favoritesOnly, { onChange(filters.copy(favoritesOnly = !filters.favoritesOnly)) })
                 CategoryChip("Pinned", filters.pinnedOnly, { onChange(filters.copy(pinnedOnly = !filters.pinnedOnly)) })
             }
             Label("Platform")
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Platform.entries.forEach { p ->
                     CategoryChip(p.label, filters.platform == p, { onChange(filters.copy(platform = if (filters.platform == p) null else p)) })
                 }
             }
             if (!lockCategory && categories.isNotEmpty()) {
                 Label("Category")
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     categories.forEach { c ->
                         CategoryChip(c.name, filters.categoryId == c.id, { onChange(filters.copy(categoryId = if (filters.categoryId == c.id) null else c.id)) })
                     }
@@ -68,7 +68,7 @@ fun FilterSheet(
             }
             if (tags.isNotEmpty()) {
                 Label("Tag")
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     tags.take(30).forEach { t ->
                         CategoryChip("#${t.name}", filters.tag.equals(t.name, true), { onChange(filters.copy(tag = if (filters.tag.equals(t.name, true)) null else t.name)) })
                     }
@@ -145,7 +145,7 @@ fun TextInputDialog(
                 )
                 if (suggestions.isNotEmpty()) {
                     Spacer(Modifier.height(8.dp))
-                    FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                         suggestions.take(12).forEach { s -> CategoryChip("#$s", text.equals(s, true), { text = s; error = null }) }
                     }
                 }
